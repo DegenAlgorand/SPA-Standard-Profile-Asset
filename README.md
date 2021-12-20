@@ -122,11 +122,11 @@ An example of a profile JSON Metadata file for a song follows. The properties ar
 
 Clients SHOULD render a profile's latest metadata. Clients MAY render an ASA's previous metadata for changelogs or other historical features.
 
-##### Updating ARC69 metadata
+##### Updating Profile metadata
 
 Managers MAY update a profile metadata. To do so, they MUST send a new `acfg` transaction with the entire metadata represented as JSON in the transaction's `note` field.
 
-##### Making ARC69 metadata immutable
+##### Making Profile metadata immutable
 
 Managers MAY make a profile immutable. To do so, they MUST remove the ASA's manager address with an `acfg` transaction.
 
