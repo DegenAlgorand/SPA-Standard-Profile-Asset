@@ -1,10 +1,10 @@
 ---
 version: 0.1
-title: Community Parameters Convention for User Profile ASAs
+title: Community Parameters Convention for Standard Profile Assets (ASAs)
 status: Draft
 ---
 
-# Community Parameters Convention for User Profile ASAs
+# Community Parameters Convention for Standard Profile Assets (ASAs)
 
 ## Summary
 
