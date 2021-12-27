@@ -61,19 +61,11 @@ The JSON Metadata schema is as follows:
         },
         "links": {
             "description": "Links to the user's external pages.",
-            "type": "array",
-            "items": {
-                "description": "Link to an external page.",
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "Name of the website linked.",
-                        "type": "string",
-                    },
-                    "url": {
-                        "description": "URL pointing at an external website.",
-                        "type": "string",
-                    }
+            "type": "object",
+            "patternProperties": {
+                "[^\n]+": {
+                    "description": "External link URL. The key can be used as label for this URL.",
+                    "type": "string",
                 }
             }
             
@@ -103,16 +95,11 @@ An example of a profile JSON Metadata file for a song follows. The properties ar
     "name": "John Doe",
     "picture": "ipfs://bafybeic4xuwsedtfjohcrc2kbr6ixt4u4gbq6oyn6vretq2soefulgmkqm",
     "bio": "NFT collector on the Algorand blockchain.",
-    "links": [
-        {
-            "name":"Twitter",
-            "value":"https://twitter.com/johndoe-sample"
-        },
-        {
-            "name":"Website",
-            "value":"https://johndoe.com"
-        },
-    ]
+    "links": {
+        "Twitter": "https://twitter.com/johndoe-sample",
+        "Twitter (project)": "https://twitter.com/johndoe-sample-project",
+        "Website": "https://johndoe.com"
+    }
 }
 ```
 
